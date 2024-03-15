@@ -58,7 +58,7 @@ def parse_reports(pattern: str | None = None) -> list[list[str]]:
         parsed = parser.from_file(str(path))
         content = parsed['content']
 
-        page_pattern = re.compile('([A-Z]\\d{6}) Page (\\d+)')
+        page_pattern = re.compile('([A-Z]+\\d{6}_?\\d*) Page (\\d+)')
         group = None
         pages = {}
         page = 0
